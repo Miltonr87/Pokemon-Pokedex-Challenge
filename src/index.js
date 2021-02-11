@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import { Router } from 'react-router-dom';
-import { CreateBrowserHistory } from 'history';
+import { createBrowserHistory } from 'history';
 
 const history = createBrowserHistory()
 
