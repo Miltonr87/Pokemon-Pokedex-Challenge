@@ -146,5 +146,5 @@ export default {
         "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/7.png",
       front_shiny_female: null,
     },
-  };
+  },
 };  
