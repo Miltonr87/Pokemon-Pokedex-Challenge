@@ -5,7 +5,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Data from '../Data';
 
  const useStyles = makeStyles({
-     pokedexContainer: {
+     cardsContainer: {
          paddingTop: '20px',
          paddingLeft:  '50px',
          paddingRight: '50px'
@@ -17,7 +17,7 @@ import Data from '../Data';
 const Cards = () => {
     const classes = useStyles();
     const [pokemonData, setPokemonData ] = useState(Data);  
-    // testing with *undefined* value before Data to see the spinning (CircularProgress)
+    // test with *undefined* value before Data to see the spinning (CircularProgress)
 
     const pokemonCard = (item) => {
         console.log(pokemonData[`${item}`]);
@@ -30,7 +30,7 @@ const Cards = () => {
         </Grid>)
     }
 
-    
+    const pokemonMap = Object.keys(pokemonData).map(item => pokemonCard(item))
 
     return (
         <>
@@ -40,11 +40,11 @@ const Cards = () => {
         <HeroDiv>
             <HeroH1> Cards page </HeroH1>
         </HeroDiv>
-        <Grid container spacing={2} className={classes.pokedexContainer}>
-        {Object.keys(pokemonData).map(item => pokemonCard(item))}
+        <Grid container spacing={2} className={classes.cardsContainer}>
+        {pokemonMap}
         {/*
         Testing
-        {pokemonData ? (<Grid container spacing={2} className={classes.pokedexContainer}>
+        {pokemonData ? (<Grid container spacing={2} className={classes.cardsContainer}>
                     {pokemonCard()}
                     {pokemonCard()}
                     {pokemonCard()}
