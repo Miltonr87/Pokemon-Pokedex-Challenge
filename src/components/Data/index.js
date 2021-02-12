@@ -147,4 +147,4 @@ export default {
       front_shiny_female: null,
     },
   },
-};  
+};
