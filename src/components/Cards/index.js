@@ -1,6 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { HeroDiv , HeroH1 } from './Cards';
-import { AppBar, Toolbar, Grid, Card, CardMedia, CardContent, CircularProgress } from '@material-ui/core';
+import { 
+    AppBar, 
+    Toolbar, 
+    Grid, 
+    Card, 
+    CardMedia, 
+    CardContent, 
+    CircularProgress } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import Data from '../Data';
 import axios from 'axios';
@@ -13,7 +20,11 @@ import axios from 'axios';
      },
 
      cardMedia: {
-         margin: 'auto'
+         margin: 'auto',
+     },
+
+     cardContent: {
+         textAlign: 'center',
      }
 
  });
