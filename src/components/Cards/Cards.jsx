@@ -2,11 +2,23 @@ import styled from "styled-components";
 import { fade, makeStyles } from "@material-ui/core/styles";
 import { CardMedia } from "@material-ui/core"; 
 
+export const NavBar = styled.div`
+  display: flex;
+  flex-grow: 1;
+  font-size: 8rem;
+`;
+
+export const MenuIcon = styled.img`
+    width: 45px;
+    height: 45px;
+`;
+
 export const useStyles = makeStyles((theme) => ({
 
-  root: {
-    flexGrow: 1,
+  AppBar: {
+    backgroundColor: "#fe3c00",
   },
+
   menuButton: {
     marginRight: theme.spacing(2),
   },
@@ -57,15 +69,21 @@ export const useStyles = makeStyles((theme) => ({
     },
   },     
     cardContainer: {
-      paddingTop: "20px",
-      paddingLeft: "50px",
-      paddingRight: "50px",
+      paddingTop: "2rem",
+      paddingLeft: "5rem",
+      paddingRight: "5rem",
     },
     cardMedia: {
       margin: "auto",
     },
     cardContent: {
       textAlign: "center",
+      '&:hover': {
+        transition: '0.7s',
+        background: "#fe3c00",
+        color: "white",
+        cursor: "pointer",
+     },
     },
     searchContainer: {
       display: "flex",
@@ -74,26 +92,29 @@ export const useStyles = makeStyles((theme) => ({
       paddingRight: "20px",
       marginTop: "5px",
       marginBottom: "5px",
+      borderRadius: "10px",
     },
     searchIcon: {
       alignSelf: "flex-end",
-      marginBottom: "5px",
+      marginBottom: "10px",
+      fontSize: "400px,"
     },
     searchInput: {
-      width: "200px",
+      width: "150px",
       margin: "5px",
     },
   }));
 
 export const TitleDiv = styled.div`
-    background-color: white;
+    margin-top: 100px;
 `;
 export const TitleH1 = styled.h1`
-    color: darkblue;
+    color: #fe3c00;
     text-align: center;
 `;
 
 export const CardMediaUI = styled(CardMedia)`
     width: 130px;
     height: 130px;
+    border-radius: 50px;
 `;

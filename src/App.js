@@ -3,19 +3,14 @@ import { createGlobalStyle } from "styled-components";
 import Cards from './components/Cards';
 import Pokemon from './components/Pokemon';
 import { Route, Switch } from 'react-router-dom';
-
 /* import NavBar from './components/NavBar'; */
 
 const GlobalStyle = createGlobalStyle`
 
-  * {
-    font-family: ubuntu;
-}
-
 body {
   margin: 0;
   height: 100%;
-  background-color: yellow;
+  background-color: aquamarine;
 }
 
 `;
@@ -35,7 +30,6 @@ const App = () => {
           path="/:item" 
           exact
           render={(props) => <Pokemon {...props} />} />
-
       </Switch>
       </>);
 };

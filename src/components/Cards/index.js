@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { 
+import {
+  NavBar, 
   useStyles, 
   CardMediaUI, 
   TitleDiv, 
@@ -13,11 +14,11 @@ import {
     Toolbar,
     AppBar,
     TextField,
-    IconButton
   } from "@material-ui/core"; 
 import SearchIcon from '@material-ui/icons/Search';
-import MenuIcon from '@material-ui/icons/Menu';
 /* import Data from '../Data'; */
+import { MenuIcon } from './Cards';
+import Pokeball from '../../images/pokeball.png';
 import axios from 'axios';
 
 
@@ -86,19 +87,11 @@ const Cards = (props) => {
 
   return (
     <>
-      <div className={classes.root}>
-      <AppBar position="static">
+      <NavBar>
+      <AppBar className={classes.AppBar}>
         <Toolbar>
-          <IconButton
-            edge="start"
-            className={classes.menuButton}
-            color="inherit"
-            aria-label="open drawer"
-          >
-            <MenuIcon />
-          </IconButton>
           <Typography className={classes.title} variant="h6" noWrap>
-            Pokedex
+          <MenuIcon src={Pokeball} />Pokedex
           </Typography>
           <div className={classes.searchContainer}>
                   <TextField
@@ -111,7 +104,7 @@ const Cards = (props) => {
           </div>
         </Toolbar>
       </AppBar>
-    </div>
+    </NavBar>
       <TitleDiv>
         <TitleH1> Pokemon Card List </TitleH1>
       </TitleDiv>
