@@ -56,7 +56,7 @@ export const useStyles = makeStyles((theme) => ({
       },
     },
   },     
-    pokedexContainer: {
+    cardContainer: {
       paddingTop: "20px",
       paddingLeft: "50px",
       paddingRight: "50px",

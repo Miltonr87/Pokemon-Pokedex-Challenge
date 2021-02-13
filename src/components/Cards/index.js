@@ -69,14 +69,20 @@ const Cards = (props) => {
     );
   };
 
-  /* Object Map for data with filter includes getPokemonCard. Anything goes to another page */
+  /* Map method for data with filter includes getPokemonCard */
   const pokemonMap = Object.keys(pokemonData).map(
     (pokemonId) => pokemonData[pokemonId].name.includes(filter) && getPokemonCard(pokemonId))
-  
-  /* event handler for TextField */  
+
+  /* Event handler for TextField */  
   const handleSearchChange = (event) => {
     setFilter(event.target.value);
   };
+
+  /* Card search results. Search failed == CircularProgress visual effect */
+  const pokemonCard = pokemonData ? (
+    <Grid container spacing={2} className={classes.cardContainer}>
+      {pokemonMap}
+      </Grid>) : ( <CircularProgress />)
 
   return (
     <>
@@ -109,13 +115,7 @@ const Cards = (props) => {
       <TitleDiv>
         <TitleH1> Pokemon Card List </TitleH1>
       </TitleDiv>
-        {pokemonData ? (
-            <Grid container spacing={2} className={classes.pokedexContainer}>
-            {pokemonMap}
-            </Grid>
-        ) : (
-            <CircularProgress />
-        )}
+        {pokemonCard}
     </>
   );
 };
