@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Typography, Link, CircularProgress, Button } from "@material-ui/core";
-import { PokemonProfile, Center, Container } from "./Pokemon";
+import { PokemonProfile, Section, Container } from "./Pokemon";
 import axios from "axios";
 /* import Data from '../Data'; */
 
