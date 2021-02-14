@@ -2,6 +2,9 @@ import styled from "styled-components";
 import { fade, makeStyles } from "@material-ui/core/styles";
 import { CardMedia } from "@material-ui/core"; 
 
+export const HeroSection = styled.div`
+`;
+
 export const NavBar = styled.div`
   display: flex;
   flex-grow: 1;
@@ -51,7 +54,15 @@ export const useStyles = makeStyles((theme) => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-  },
+    alignSelf: "flex-end",
+    marginBottom: "10px",
+    fontSize: "400px,"
+},
+
+searchInput: {
+  width: "150px",
+  margin: "5px",
+},
   inputRoot: {
     color: 'inherit',
   },
@@ -93,15 +104,6 @@ export const useStyles = makeStyles((theme) => ({
       marginTop: "5px",
       marginBottom: "5px",
       borderRadius: "10px",
-    },
-    searchIcon: {
-      alignSelf: "flex-end",
-      marginBottom: "10px",
-      fontSize: "400px,"
-    },
-    searchInput: {
-      width: "150px",
-      margin: "5px",
     },
   }));
 

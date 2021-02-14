@@ -31,7 +31,7 @@ const Cards = (props) => {
 
   useEffect(() => {
     axios
-      .get(`https://pokeapi.co/api/v2/pokemon?limit=898`)
+      .get(`https://pokeapi.co/api/v2/pokemon?limit=897`)
       .then(function (response) {
         const { data } = response;
         const { results } = data;
@@ -55,7 +55,7 @@ const Cards = (props) => {
       history.push(`/${id}`)
     }
 
-    return (
+    return ( 
       <Grid item xs={4} key={pokemonId}>
         <Card onClick={clicked}>
           <CardMediaUI
