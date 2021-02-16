@@ -2,9 +2,6 @@ import styled from "styled-components";
 import { fade, makeStyles } from "@material-ui/core/styles";
 import { CardMedia } from "@material-ui/core"; 
 
-export const HeroSection = styled.div`
-`;
-
 export const NavBar = styled.div`
   display: flex;
   flex-grow: 1;
@@ -17,7 +14,6 @@ export const MenuIcon = styled.img`
 `;
 
 export const useStyles = makeStyles((theme) => ({
-
   AppBar: {
     backgroundColor: "#fe3c00",
   },
@@ -75,7 +71,7 @@ searchInput: {
     [theme.breakpoints.up('sm')]: {
       width: '12ch',
       '&:focus': {
-        width: '20ch',
+        width: '10ch',
       },
     },
   },     
@@ -112,6 +108,7 @@ export const PokedexDiv = styled.div`
 `;
 export const PokedexP = styled.p`
     color: #fe3c00;
+    font-weight: 900;
     text-align: center;
 `;
 

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { Typography, Link, Button } from "@material-ui/core";
-import CircularStatic from '../ProgressBar/CircularStatic';
-import { PokemonProfile, Section, Container } from "./Pokemon";
+import LinearProgressBar from "../ProgressBar";
+import { PokemonProfile, Section, Container, Label, ButtonUI } from "./Pokemon";
+import { Typography } from "@material-ui/core";
 import axios from "axios";
 /* import Data from '../Data'; */
 
@@ -9,31 +9,39 @@ const Pokemon = (props) => {
   const { match, history } = props;
   const { params } = match;
   const { pokemonId } = params;
+  /* const { evolutionId } = params; */
   const [pokemon, setPokemon] = useState();
+  /* const [pokemonEvolution, setPokemonEvolution] = useState(); */
 
   useEffect(() => {
     axios
-      .get(`https://pokeapi.co/api/v2/pokemon/${pokemonId}/`) 
-      .then(function (response) {
+      .get(`https://pokeapi.co/api/v2/pokemon/${pokemonId}/`)
+      .then((response) => {
         const { data } = response;
+        console.log(response.data, "DataID");
         setPokemon(data);
       })
       .catch(function (error) {
         setPokemon(false);
       });
   }, [pokemonId]);
+  /*
+  useEffect(() => {
+  axios
+      .get(`https://pokeapi.co/api/v2/evolution-chain/${evolutionId}/`) 
+      .then((response) => {
+        const { data2 } = response;
+        console.log(response.data2, 'DataEV')
+        setPokemonEvolution(data2);
+      })
+      .catch(function (error) {
+        setPokemonEvolution(false);
+      });
+  }, [evolutionId]);*/
 
-  const generatePokemonJSX = (pokemon) => {
-    const {
-      name,
-      id,
-      species,
-      height,
-      weight,
-      types,
-      abilities,
-      stats,
-    } = pokemon;
+  const generatePokemonJSX = (pokemon /* pokemonEvolution */) => {
+    const { name, id, species, types, abilities, stats } = pokemon;
+    /* const { evolves_to } = pokemonEvolution; */
     const imageUrl = `https://pokeres.bastionbot.org/images/pokemon/${id}.png`;
 
     return (
@@ -42,14 +50,9 @@ const Pokemon = (props) => {
           <Container>
             <Typography variant="h1">{`${name}`}</Typography>
             <PokemonProfile src={imageUrl} alt="Image" />
-            <Typography variant="h3">Pokemon Info </Typography>
-            <Typography>
-              {"Species: "}
-              <Link href={species.url}>{species.name} </Link>
-            </Typography>
-            <Typography>Height: {height} </Typography>
-            <Typography>Weight: {weight} </Typography>
-            <Typography variant="h6"> Types:</Typography>
+            <Typography variant="h3">Information</Typography>
+            <Typography>Species: {species.name}</Typography>
+            <Typography variant="h6"> Type:</Typography>
             {types.map((typeInfo) => {
               const { type } = typeInfo;
               const { name } = type;
@@ -73,6 +76,12 @@ const Pokemon = (props) => {
                 </Typography>
               );
             })}
+            {/* <Typography variant="h6"> Evolution:</Typography>
+            {evolves_to.map((evolutionInfo) => {
+              const { evolves_to } = evolutionInfo;
+              const { name } = species.name;
+              return <Typography key={name}> {`${name}`}</Typography>;
+            })} */}
           </Container>
         </Section>
       </>
@@ -80,13 +89,21 @@ const Pokemon = (props) => {
   };
   return (
     <>
-      {pokemon === undefined && <CircularStatic />}
-      {pokemon !== undefined && pokemon && generatePokemonJSX(pokemon)}
-      {pokemon === false && <Typography> Pokemon not found</Typography>}
-      {pokemon !== undefined && (
-        <Button variant="contained" onClick={() => history.push("/")}>
-          Back to Pokedex
-        </Button>
+      {pokemon /* && /pokemonEvolution */ === undefined && (
+        <LinearProgressBar />
+      )}
+      {pokemon /* && pokemonEvolution */ !== undefined &&
+        pokemon &&
+        /* pokemonEvolution && */ generatePokemonJSX(pokemon)}
+      {pokemon /* && pokemonEvolution */ === false && (
+        <Typography> Pokemon not found!</Typography>
+      )}
+      {pokemon /* && pokemonEvolution */ !== undefined && (
+        <Label>
+          <ButtonUI onClick={() => history.push("/")}>
+          ↩️ Back
+          </ButtonUI>
+        </Label>
       )}
     </>
   );

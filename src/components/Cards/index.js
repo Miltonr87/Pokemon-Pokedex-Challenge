@@ -10,21 +10,21 @@ import {
     Card,
     CardContent,
     Typography,
-    CircularProgress,
     Toolbar,
     AppBar,
-    TextField,
+    TextField
   } from "@material-ui/core"; 
-/*import SearchIcon from '@material-ui/icons/Search';*/
 /* import Data from '../Data'; */
 import { MenuIcon } from './Cards';
 import PokeLogo from '../../images/pokemonLogo.svg';
 import { PokemonSelector } from '@charkour/react-reactions';
-import LinearProgressBar from '../ProgressBar/LinearProgressBar';
+import LinearProgressBar from '../ProgressBar';
+
 import axios from 'axios';
 
 
 const Cards = (props) => {
+  const date = new Date().getFullYear();
   const classes = useStyles();
   const { history } = props;
   const [pokemonData, setPokemonData] = useState({});
@@ -34,7 +34,7 @@ const Cards = (props) => {
   useEffect(() => {
     axios
       .get(`https://pokeapi.co/api/v2/pokemon?limit=897`)
-      .then(function (response) {
+      .then((response) => {
         const { data } = response;
         const { results } = data;
         const newPokemonData = {};
@@ -85,7 +85,7 @@ const Cards = (props) => {
   const pokemonCard = pokemonData ? (
     <Grid container spacing={2} className={classes.cardContainer}>
       {pokemonMap}
-      </Grid>) : ( <CircularProgress />)
+      </Grid>) : ( <LinearProgressBar />)
 
   return (
     <>
@@ -112,7 +112,7 @@ const Cards = (props) => {
         {pokemonCard}
     </PokedexDiv>
     <PokedexDiv>
-        <PokedexP> <LinearProgressBar /> </PokedexP>
+        <PokedexP> © Milton Rodrigues - {date} </PokedexP>
     </PokedexDiv>
     </>
   );
