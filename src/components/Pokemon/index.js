@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { Typography, Link, CircularProgress, Button } from "@material-ui/core";
+import { Typography, Link, Button } from "@material-ui/core";
+import CircularStatic from '../ProgressBar/CircularStatic';
 import { PokemonProfile, Section, Container } from "./Pokemon";
 import axios from "axios";
 /* import Data from '../Data'; */
@@ -12,7 +13,7 @@ const Pokemon = (props) => {
 
   useEffect(() => {
     axios
-      .get(`https://pokeapi.co/api/v2/pokemon/${pokemonId}/`)
+      .get(`https://pokeapi.co/api/v2/pokemon/${pokemonId}/`) 
       .then(function (response) {
         const { data } = response;
         setPokemon(data);
@@ -41,7 +42,7 @@ const Pokemon = (props) => {
           <Container>
             <Typography variant="h1">{`${name}`}</Typography>
             <PokemonProfile src={imageUrl} alt="Image" />
-            <Typography variant="h3">Pokemon Info</Typography>
+            <Typography variant="h3">Pokemon Info </Typography>
             <Typography>
               {"Species: "}
               <Link href={species.url}>{species.name} </Link>
@@ -79,7 +80,7 @@ const Pokemon = (props) => {
   };
   return (
     <>
-      {pokemon === undefined && <CircularProgress />}
+      {pokemon === undefined && <CircularStatic />}
       {pokemon !== undefined && pokemon && generatePokemonJSX(pokemon)}
       {pokemon === false && <Typography> Pokemon not found</Typography>}
       {pokemon !== undefined && (

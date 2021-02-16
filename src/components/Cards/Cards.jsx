@@ -12,8 +12,8 @@ export const NavBar = styled.div`
 `;
 
 export const MenuIcon = styled.img`
-    width: 45px;
-    height: 45px;
+    width: 180px;
+    height: 65px;
 `;
 
 export const useStyles = makeStyles((theme) => ({
@@ -107,10 +107,10 @@ searchInput: {
     },
   }));
 
-export const TitleDiv = styled.div`
+export const PokedexDiv = styled.div`
     margin-top: 100px;
 `;
-export const TitleH1 = styled.h1`
+export const PokedexP = styled.p`
     color: #fe3c00;
     text-align: center;
 `;

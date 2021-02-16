@@ -3,8 +3,8 @@ import {
   NavBar, 
   useStyles, 
   CardMediaUI, 
-  TitleDiv, 
-  TitleH1 } from './Cards'; 
+  PokedexDiv, 
+  PokedexP } from './Cards'; 
 import {
     Grid,
     Card,
@@ -15,10 +15,12 @@ import {
     AppBar,
     TextField,
   } from "@material-ui/core"; 
-import SearchIcon from '@material-ui/icons/Search';
+/*import SearchIcon from '@material-ui/icons/Search';*/
 /* import Data from '../Data'; */
 import { MenuIcon } from './Cards';
-import Pokeball from '../../images/pokeball.png';
+import PokeLogo from '../../images/pokemonLogo.svg';
+import { PokemonSelector } from '@charkour/react-reactions';
+import LinearProgressBar from '../ProgressBar/LinearProgressBar';
 import axios from 'axios';
 
 
@@ -91,8 +93,9 @@ const Cards = (props) => {
       <AppBar className={classes.AppBar}>
         <Toolbar>
           <Typography className={classes.title} variant="h6" noWrap>
-          <MenuIcon src={Pokeball} />Pokedex
+          <MenuIcon src={PokeLogo} />
           </Typography>
+
           <div className={classes.searchContainer}>
                   <TextField
                   className={classes.searchInput}
@@ -100,15 +103,17 @@ const Cards = (props) => {
                   label="Search"
                   variant="standard"
                   />
-                  <SearchIcon className={classes.searchIcon} />
           </div>
+          <PokemonSelector reactions={['love']} />
         </Toolbar>
       </AppBar>
     </NavBar>
-      <TitleDiv>
-        <TitleH1> Pokemon Card List </TitleH1>
-      </TitleDiv>
+    <PokedexDiv>
         {pokemonCard}
+    </PokedexDiv>
+    <PokedexDiv>
+        <PokedexP> <LinearProgressBar /> </PokedexP>
+    </PokedexDiv>
     </>
   );
 };

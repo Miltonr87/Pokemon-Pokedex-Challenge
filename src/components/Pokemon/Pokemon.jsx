@@ -33,6 +33,17 @@ export const Section = styled.div`
 export const Container = styled.div`
     text-align: center;
     padding: 8px;
+        display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f6d743;
+    border: 1px solid #120136;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    min-width: 150px;
+    flex-grow: 1;
+}
 `;
 
 export const PokemonProfile = styled.img`
