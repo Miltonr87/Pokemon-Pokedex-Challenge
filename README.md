@@ -1,70 +1,30 @@
-# Getting Started with Create React App
+### PokeDex Challenge
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Screen Shot](https://github.com/Miltonr87/GlobeCoin/blob/main/pokedex.png)
 
-## Available Scripts
+[X] Desktop version
 
-In the project directory, you can run:
+### Sobre
 
-### `yarn start`
+Criado com React Hooks, o **Pokedex** usa uma barra de buscas para pesquisar os bichinhos que aciona o Hooks useEffect. Em integração com o Axios, ele mostra os dados que o usuário deseja por meio de buscas feitas na API do Pokémon. Como nem todos os pokemons estão disponíveis com fotos e ademais atributos, optei por setar um limite de aparecimento deles em 897, o limite foi estabelecido para evitar quebras visuais. Caso o usuário digite ainda um nome de Pokémon errado, uma Barra de Progresso (obtida pelo Material UI) é acionada e simula visualmente uma busca ininterrupta no sistema. Ao clicar também em cada uma das criaturas, uma nova área do Pokedex é aberta e revela o card do Pokémon específico, onde são mostradas informações do seu tipo, poderes e atributos. Nesta área uma nova imagem é exibida (dessa vez em tamanho maior à fornecida pela API originalmente, obtida pela https://pokeres.bastionbot.org/ e que utiliza o mesmo cadastro de IDs) . 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Ciclo de Vida
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Todos os componentes em React possuem algum tipo de Ciclo de Vida. Diferentemente do Vanilla Javascript, o React renderiza seus efeitos em tela por meio do Virtual DOM e utiliza um artifício diferente. Sendo assim, de maneira declarativa, os componentes podem sofrer alterações desde a hora em que são construídos (montados/mounting), atualizados (atualizados/update) até a hora que precisam ser desconstruídos (desmontados/dismount). Para evitar o uso excessivo de classes e tornar o React mais funcional, a curadoria da biblioteca lançou um conjunto de métodos mais funcionais. Sendo assim, useState adiciona estado no React e atualiza um componente, já o useEffect gerencia efeitos colaterais (como buscar dados por exemplo), entre outros.     
 
-### `yarn test`
+### Pacotes Adicionais
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [Axios](https://github.com/axios/axios) (Para capturar e tratar os dados da API de maneira mais simples e rápida do que o Fetch)
+- [Styled Components](https://github.com/styled-components/styled-components) (Usado para simplificar o CSS e eliminar o excessivo uso de classes no JSX)
+- [React Router](https://reactrouter.com/) (React Component Pattern)
+- [React Reactions](https://www.npmjs.com/package/react-scroll) (Para inserir ícones do Pokemon na aplicação)
+- [Material UI](http://react-icons.github.io/react-icons/) (Para acelerar o processo de criação do CSS e inclusão do efeito de Barra Progressiva)
 
-### `yarn build`
+### Live Demo 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- [LIVE DEMO HERE](https://pokemon-pokedex-challenge.vercel.app/)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### License
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+This project is licensed under the [MIT License](https://magno.mit-license.org/2018). Copyright © Milton Rodrigues
 
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

@@ -81,7 +81,7 @@ export const ButtonUI = styled(Button)`
   border-right-width: 1px;
   border-right: 0;
   font-size: 20px;
-  background-color: #fe3c00;
+  background-color: #3f51b5;
   color: #fff;
   cursor: pointer;
   

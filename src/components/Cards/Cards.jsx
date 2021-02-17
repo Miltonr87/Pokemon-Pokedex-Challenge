@@ -14,9 +14,6 @@ export const MenuIcon = styled.img`
 `;
 
 export const useStyles = makeStyles((theme) => ({
-  AppBar: {
-    backgroundColor: "#fe3c00",
-  },
 
   menuButton: {
     marginRight: theme.spacing(2),
@@ -87,7 +84,7 @@ searchInput: {
       textAlign: "center",
       '&:hover': {
         transition: '0.7s',
-        background: "#fe3c00",
+        background: "#3f51b5",
         color: "white",
         cursor: "pointer",
      },
@@ -107,7 +104,6 @@ export const PokedexDiv = styled.div`
     margin-top: 100px;
 `;
 export const PokedexP = styled.p`
-    color: #fe3c00;
     font-weight: 900;
     text-align: center;
 `;
