@@ -1,6 +1,6 @@
 ### PokeDex Challenge
 
-![Screen Shot](https://github.com/Miltonr87/GlobeCoin/blob/main/pokedex.png)
+![Screen Shot](https://github.com/Miltonr87/pokemon-pokedex-challenge/blob/main/pokedex.png)
 
 [X] Desktop version
 
@@ -22,7 +22,7 @@ Todos os componentes em React possuem algum tipo de Ciclo de Vida. Diferentement
 
 ### Live Demo 
 
-- [LIVE DEMO HERE](https://pokemon-pokedex-challenge.vercel.app/)
+- [LIVE DEMO HERE](https://pokemon-pokedex-challenge-hyno8z4lv.vercel.app/)
 
 #### License
 
