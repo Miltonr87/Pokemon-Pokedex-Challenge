@@ -17,8 +17,8 @@ Todos os componentes em React possuem algum tipo de Ciclo de Vida. Diferentement
 - [Axios](https://github.com/axios/axios) (Para capturar e tratar os dados da API de maneira mais simples e rápida do que o Fetch)
 - [Styled Components](https://github.com/styled-components/styled-components) (Usado para simplificar o CSS e eliminar o excessivo uso de classes no JSX)
 - [React Router](https://reactrouter.com/) (React Component Pattern)
-- [React Reactions](https://www.npmjs.com/package/react-scroll) (Para inserir ícones do Pokemon na aplicação)
-- [Material UI](http://react-icons.github.io/react-icons/) (Para acelerar o processo de criação do CSS e inclusão do efeito de Barra Progressiva)
+- [React Reactions](https://casesandberg.github.io/react-reactions/) (Para inserir ícones do Pokemon na aplicação)
+- [Material UI](https://material-ui.com/) (Para acelerar o processo de criação do CSS e inclusão do efeito de Barra Progressiva)
 
 ### Live Demo 
 
