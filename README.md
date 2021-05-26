@@ -1,30 +1,39 @@
-### PokeDex Challenge
+### Pokemon V2
 
-![Screen Shot](https://github.com/Miltonr87/pokemon-pokedex-challenge/blob/main/pokedex.png)
+![Screen Shot](https://github.com/Miltonr87/Pokemon-V2/blob/main/pokemon.png)
 
 [X] Desktop version
 
-### Sobre
+[X] Mobile version
 
-Criado com React Hooks, o **Pokedex** usa uma barra de buscas para pesquisar os bichinhos que aciona o Hooks useEffect. Em integração com o Axios, ele mostra os dados que o usuário deseja por meio de buscas feitas na API do Pokémon. Como nem todos os pokemons estão disponíveis com fotos e ademais atributos, optei por setar um limite de aparecimento deles em 897, o limite foi estabelecido para evitar quebras visuais. Caso o usuário digite ainda um nome de Pokémon errado, uma Barra de Progresso (obtida pelo Material UI) é acionada e simula visualmente uma busca ininterrupta no sistema. Ao clicar também em cada uma das criaturas, uma nova área do Pokedex é aberta e revela o card do Pokémon específico, onde são mostradas informações do seu tipo, poderes e atributos. Nesta área uma nova imagem é exibida (dessa vez em tamanho maior à fornecida pela API originalmente, obtida pela https://pokeres.bastionbot.org/ e que utiliza o mesmo cadastro de IDs) . 
+### About
 
-### Ciclo de Vida
+Pokemon V2 uses a SearchBar feature to search for pokemons with useEffect hook in React. Since not all pokemons are available with photos and attributes, I chose to set a limit on their appearance in 897 - the limit was made to avoid visual breaks with photos inside the cards. Otherwise if the user enters a wrong Pokemon name, a progress bar (obtained from the material's UI) is activated and visually simulates an uninterrupted search on the API system. When users also click on each creatures, a new Card area opens and reveals more information like type, powers and attributes. 
 
-Todos os componentes em React possuem algum tipo de Ciclo de Vida. Diferentemente do Vanilla Javascript, o React renderiza seus efeitos em tela por meio do Virtual DOM e utiliza um artifício diferente. Sendo assim, de maneira declarativa, os componentes podem sofrer alterações desde a hora em que são construídos (montados/mounting), atualizados (atualizados/update) até a hora que precisam ser desconstruídos (desmontados/dismount). Para evitar o uso excessivo de classes e tornar o React mais funcional, a curadoria da biblioteca lançou um conjunto de métodos mais funcionais. Sendo assim, useState adiciona estado no React e atualiza um componente, já o useEffect gerencia efeitos colaterais (como buscar dados por exemplo), entre outros.     
 
-### Pacotes Adicionais
+### Getting Started
 
-- [Axios](https://github.com/axios/axios) (Para capturar e tratar os dados da API de maneira mais simples e rápida do que o Fetch)
-- [Styled Components](https://github.com/styled-components/styled-components) (Usado para simplificar o CSS e eliminar o excessivo uso de classes no JSX)
+- Clone the repo (HTTP Protocol): ```git clone https://github.com/Miltonr87/frontend-challenge.git```
+- Using NPM or Yarn to install the React APP and run the project on your computer. 
+
+### Required:
+
+As you see, **Pokemon V2** runs on [Node.js](https://nodejs.org/), so before you can continue, please ensure that you have it installed with NPM or Yarn. Once you have Node installed, you will need the React (17.01) library. So, to start the project in your machine, open your terminal inside the GlobeCoin folder and type "NPM Install" or "Yarn Install".
+
+### Additional packages
+
+- [Axios](https://github.com/axios/axios) (To capture the Pokemon API information)
+- [Styled Components](https://github.com/styled-components/styled-components) (Used to simplify CSS and optimize the application)
 - [React Router](https://reactrouter.com/) (React Component Pattern)
-- [React Reactions](https://casesandberg.github.io/react-reactions/) (Para inserir ícones do Pokemon na aplicação)
-- [Material UI](https://material-ui.com/) (Para acelerar o processo de criação do CSS e inclusão do efeito de Barra Progressiva)
+- [React Scroll](https://www.npmjs.com/package/react-scroll) (Scroll effects after menu click)
+- [React Reactions](https://casesandberg.github.io/react-reactions/) (To insert specific Pokemon icon as a button)
+- [Material UI](https://material-ui.com/) (Component Design and Miscellaneous Icons)
 
 ### Live Demo 
 
-- [LIVE DEMO HERE](https://pokemon-pokedex-challenge-hyno8z4lv.vercel.app/)
+- [LIVE DEMO HERE](https://teste.com/)
 
 #### License
 
-This project is licensed under the [MIT License](https://magno.mit-license.org/2018). Copyright © Milton Rodrigues
+This project is licensed under the [MIT License](https://magno.mit-license.org/2021). Copyright © Milton Rodrigues
 
