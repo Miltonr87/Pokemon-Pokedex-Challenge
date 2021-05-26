@@ -31,7 +31,7 @@ As you see, **Pokemon V2** runs on [Node.js](https://nodejs.org/), so before you
 
 ### Live Demo 
 
-- [LIVE DEMO HERE](https://teste.com/)
+- [LIVE DEMO HERE](https://pokemon-ashen.vercel.app/)
 
 #### License
 
