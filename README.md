@@ -13,7 +13,7 @@ Pokemon V2 uses a SearchBar feature to search for pokemons with useEffect hook i
 
 ### Getting Started
 
-- Clone the repo (HTTP Protocol): ```git clone https://github.com/Miltonr87/frontend-challenge.git```
+- Clone the repo (HTTP Protocol): ```git clone https://github.com/Miltonr87/Pokemon-V2.git```
 - Using NPM or Yarn to install the React APP and run the project on your computer. 
 
 ### Required:
