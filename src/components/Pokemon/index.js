@@ -25,8 +25,8 @@ const Pokemon = (props) => {
   }, [pokemonId]);
 
   const generatePokemonJSX = (pokemon) => {
-    const { name, id, species, types, abilities, stats } = pokemon;
-    const imageUrl = `https://pokeres.bastionbot.org/images/pokemon/${id}.png`;
+    const { name, species, types, abilities, stats } = pokemon;
+    const imageUrl = `https://projectpokemon.org/images/normal-sprite/${name}.gif`;
 
     return (
       <>
