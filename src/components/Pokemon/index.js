@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import LoadingBar from "../LoadingBar";
 import { CardSection, CardContainer, PokeImage, ButtonReturn } from "./styles";
-import BackspaceIcon from '@material-ui/icons/Backspace';
+import BackspaceIcon from "@material-ui/icons/Backspace";
 import { Typography } from "@material-ui/core";
 import axios from "axios";
 
@@ -10,7 +10,6 @@ const Pokemon = (props) => {
   const { params } = match;
   const { pokemonId } = params;
   const [pokemon, setPokemon] = useState();
-
 
   useEffect(() => {
     axios
@@ -24,7 +23,6 @@ const Pokemon = (props) => {
         setPokemon(false);
       });
   }, [pokemonId]);
-
 
   const generatePokemonJSX = (pokemon) => {
     const { name, id, species, types, abilities, stats } = pokemon;
@@ -69,17 +67,12 @@ const Pokemon = (props) => {
   };
   return (
     <>
-      {pokemon  === undefined && (
-        <LoadingBar />
-      )}
-      {pokemon !== undefined &&
-        pokemon && generatePokemonJSX(pokemon)}
-      {pokemon === false && (
-        <Typography> Pokemon not found!</Typography>
-      )}
+      {pokemon === undefined && <LoadingBar />}
+      {pokemon !== undefined && pokemon && generatePokemonJSX(pokemon)}
+      {pokemon === false && <Typography> Pokemon not found!</Typography>}
       {pokemon !== undefined && (
         <ButtonReturn onClick={() => history.push("/")}>
-            <BackspaceIcon />
+          <BackspaceIcon />
         </ButtonReturn>
       )}
     </>

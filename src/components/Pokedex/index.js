@@ -78,9 +78,7 @@ const PokeDex = (props) => {
       <NavBar id="pokedex">
         <AppBar className={classes.AppBar}>
           <Toolbar>
-            <Typography 
-              className={classes.title} 
-              variant="h6" noWrap>
+            <Typography className={classes.title} variant="h6" noWrap>
               <Header />
             </Typography>
             <div className={classes.searchContainer}>
