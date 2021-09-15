@@ -66,8 +66,8 @@ export const CardContainer = styled.div`
 `;
 
 export const PokeImage = styled.img`
-  width: 200px;
-  height: 200px;
+  width: 120px;
+  height: 120px;
   @media screen and (max-width: 768px) {
     width: 7rem;
     height: 7rem;
