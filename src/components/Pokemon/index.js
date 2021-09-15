@@ -26,7 +26,7 @@ const Pokemon = (props) => {
 
   const generatePokemonJSX = (pokemon) => {
     const { name, species, types, abilities, stats } = pokemon;
-    const imageUrl = `https://projectpokemon.org/images/normal-sprite/${name}.gif`;
+    const imageUrl = `https://projectpokemon.org/images/normal-sprite/${name.replace('-', '_')}.gif`;
 
     return (
       <>
