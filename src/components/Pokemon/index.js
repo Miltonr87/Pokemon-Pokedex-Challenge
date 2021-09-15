@@ -26,7 +26,8 @@ const Pokemon = (props) => {
 
   const generatePokemonJSX = (pokemon) => {
     const { name, species, types, abilities, stats } = pokemon;
-    const imageUrl = `https://projectpokemon.org/images/normal-sprite/${name.replace('-', '_')}.gif`;
+
+    const imageUrl = `https://projectpokemon.org/images/normal-sprite/${name == "nidoran-m" && "nidoran-f" ? name.replace('-', '_') : name.substring(0, name.lastIndexOf('-')) }.gif`;
 
     return (
       <>
