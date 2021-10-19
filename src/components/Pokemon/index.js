@@ -27,9 +27,25 @@ const Pokemon = (props) => {
   const generatePokemonJSX = (pokemon) => {
     const { name, species, types, abilities, stats } = pokemon;
 
-    const imageUrl = `https://projectpokemon.org/images/normal-sprite/${name === "nidoran-m" || name === "nidoran-f" ? name.replace('-', '_') 
-    : name === "zacian-hero" || name === "eiscue-ice" || name === "darmanitan-standard" || name === "giratina-altered" || name === "shaymin-land" || name === "porygon-z" || name === "tornadus-incarnate" || name === "thundurus-incarnate" || name === "landorus-incarnate" || name === "meloetta-aria" || name === "pumpkaboo-average" ? name.substring(0, name.lastIndexOf('-')) 
-    : name === "basculin-red-striped" || name === "minior-red-meteor" ? name.substring(0, name.lastIndexOf('-')-4) : name }.gif`;
+    const imageUrl = `https://projectpokemon.org/images/normal-sprite/${
+      name === "nidoran-m" || name === "nidoran-f"
+        ? name.replace("-", "_")
+        : name === "zacian-hero" ||
+          name === "eiscue-ice" ||
+          name === "darmanitan-standard" ||
+          name === "giratina-altered" ||
+          name === "shaymin-land" ||
+          name === "porygon-z" ||
+          name === "tornadus-incarnate" ||
+          name === "thundurus-incarnate" ||
+          name === "landorus-incarnate" ||
+          name === "meloetta-aria" ||
+          name === "pumpkaboo-average"
+        ? name.substring(0, name.lastIndexOf("-"))
+        : name === "basculin-red-striped" || name === "minior-red-meteor"
+        ? name.substring(0, name.lastIndexOf("-") - 4)
+        : name
+    }.gif`;
 
     return (
       <>
